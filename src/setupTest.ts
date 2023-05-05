@@ -1,4 +1,5 @@
-import "@testing-library/jest-dom";
-import fetchMock from "jest-fetch-mock";
+import { server } from "./mocks/server";
 
-fetchMock.enableMocks();
+beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
+afterAll(() => server.close());
+afterEach(() => server.resetHandlers());

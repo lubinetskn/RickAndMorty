@@ -1,4 +1,6 @@
-const mockResponse = {
+import { rest } from "msw";
+
+export const mockResponse = {
   info: {
     count: 826,
     pages: 42,
@@ -612,6 +614,9 @@ const mockResponse = {
   ],
 };
 
-export default {
-  get: jest.fn().mockResolvedValue(mockResponse),
-};
+// Define handlers that catch the corresponding requests and returns the mock data.
+export const handlers = [
+  rest.get("https://rickandmortyapi.com/api/character/", (req, res, ctx) => {
+    return res(ctx.status(200), ctx.json(mockResponse));
+  }),
+];
