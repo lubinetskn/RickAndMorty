@@ -1,5 +1,4 @@
 import { TextField } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import { useSearchParamsState } from "utils/search-param";
 
 export function SearchPerson() {
