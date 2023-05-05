@@ -1,4 +1,4 @@
-## Frontend StarWars App
+## Rick And Morty World App
 
 #### Описание проекта
 
