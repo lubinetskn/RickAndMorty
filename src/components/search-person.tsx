@@ -22,6 +22,7 @@ export function SearchPerson() {
     <>
       <TextField
         id="outlined-basic"
+        data-testid="search-field"
         label="Search person"
         variant="outlined"
         placeholder="type name"

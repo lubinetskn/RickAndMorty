@@ -8,7 +8,7 @@ import { CssBaseline } from "@mui/material";
 import { rickandmortyapi } from "service/rickandmorty";
 import theme from "config/theme";
 
-import App from "./App.jsx";
+import App from "./App";
 
 import "./index.css";
 
